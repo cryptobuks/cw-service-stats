@@ -1,0 +1,16 @@
+module.exports = {
+  service: 'stats',
+  fastify: { active: false, port: 0 },
+  redis: { active: false },
+  elasticSearch: { active: true },
+  mongodb: {
+    active: true,
+    databases: [
+      {
+        name: 'stats',
+        db: 'stats',
+        options: {}
+      }
+    ]
+  }
+}

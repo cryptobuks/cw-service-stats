@@ -1,0 +1,42 @@
+{
+  "name": "service-stats",
+  "version": "1.0.0",
+  "description": "service for collecting stats for internal services",
+  "main": "app/server.js",
+  "private": true,
+  "scripts": {
+    "dev": "set NODE_ENV=development; nodemon app/server.js",
+    "start": "NODE_ENV=production node app/server.js",
+    "test": "standard && jest --detectOpenHandles",
+    "new-module": "burj module ",
+    "create-doc": "node ./node_modules/@cowellness/cw-micro-service/app/helper/doc-generator.js"
+  },
+  "pre-commit": [
+    "test"
+  ],
+  "standard": {
+    "env": [
+      "node",
+      "jest"
+    ],
+    "globals": []
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:cowellness/iseo/service-stats.git"
+  },
+  "author": "Ashwin",
+  "license": "",
+  "devDependencies": {
+    "@asyncapi/generator": "^1.7.0",
+    "burj": "^1.3.0",
+    "jest": "^26.6.3",
+    "json2yaml": "^1.1.0",
+    "pre-commit": "^1.2.2",
+    "standard": "^16.0.3"
+  },
+  "dependencies": {
+    "@cowellness/cw-micro-service": "^1.17.9",
+    "config": "^3.3.6"
+  }
+}
